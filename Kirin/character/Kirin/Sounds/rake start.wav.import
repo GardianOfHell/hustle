@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rake start.wav-da965931bb172d232a1690d0a4e35b41.sample"
+
+[deps]
+
+source_file="res://Kirin/character/Kirin/Sounds/rake start.wav"
+dest_files=[ "res://.import/rake start.wav-da965931bb172d232a1690d0a4e35b41.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

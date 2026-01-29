@@ -1,0 +1,48 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://fx/CustomTrailParticle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail7.png" type="Texture" id=2]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail9.png" type="Texture" id=3]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail5.png" type="Texture" id=4]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail4.png" type="Texture" id=5]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail8.png" type="Texture" id=6]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail6.png" type="Texture" id=7]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail1.png" type="Texture" id=8]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail2.png" type="Texture" id=9]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail3.png" type="Texture" id=10]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/SparkShift/trail/sparkshifttrail10.png" type="Texture" id=11]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=12]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 12 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="CustomTrailParticle" instance=ExtResource( 1 )]
+material = SubResource( 1 )
+
+[node name="CPUParticles2D" parent="." index="1"]
+emission_rect_extents = Vector2( 10, 10 )
+gravity = Vector2( 0, 60 )
+initial_velocity = 0.0
+scale_amount = 1.4
+scale_amount_random = 0.73
+color = Color( 0.960784, 0.8, 0.8, 1 )
+anim_speed = 128.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+frames = SubResource( 2 )
+frame = 5
+playing = true

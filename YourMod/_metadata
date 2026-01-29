@@ -1,0 +1,12 @@
+{
+    "name": "Gouki",
+    "friendly_name": "Gouki by GardianOfHell",
+    "description": "A powerful fighter with the need of blood. Powerful combo game but has short range and gets defeated easily if not careful.",
+    "author": "GardianOfHell",
+    "version": "Goon",
+    "link": "",
+    "id": "239852309548203958",
+    "overwrites": false,
+    "requires": ["char_loader"],
+    "priority": 0
+}

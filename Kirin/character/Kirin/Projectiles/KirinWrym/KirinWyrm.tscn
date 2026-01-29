@@ -1,0 +1,105 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon11.png" type="Texture" id=4]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon10.png" type="Texture" id=5]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon4.png" type="Texture" id=6]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon7.png" type="Texture" id=7]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon6.png" type="Texture" id=8]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon9.png" type="Texture" id=9]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon14.png" type="Texture" id=10]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon8.png" type="Texture" id=11]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon1.png" type="Texture" id=12]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon13.png" type="Texture" id=13]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon5.png" type="Texture" id=14]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon12.png" type="Texture" id=15]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon16.png" type="Texture" id=16]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon2.png" type="Texture" id=17]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon3.png" type="Texture" id=18]
+[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon15.png" type="Texture" id=19]
+[ext_resource path="res://Kirin/character/Kirin/Particles/thrusteffect.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_multihit_impact01.wav" type="AudioStream" id=21]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="KirinWyrm" instance=ExtResource( 3 )]
+material = SubResource( 2 )
+position = Vector2( 0, 50 )
+max_ground_speed = "30"
+max_air_speed = "30"
+max_fall_speed = "30"
+
+[node name="Sprite" parent="Flip" index="0"]
+position = Vector2( 0, 50 )
+frames = SubResource( 1 )
+
+[node name="CollisionBox" parent="." index="2"]
+x = 18
+y = -87
+width = 206
+height = 41
+
+[node name="Hurtbox" parent="." index="3"]
+x = 18
+y = -80
+width = 201
+height = 47
+
+[node name="Default" parent="StateMachine" index="0"]
+apply_forces = true
+apply_fric = true
+fallback_state = "default"
+sprite_animation = "default"
+anim_length = 120
+loop_animation = true
+force_dir_x = "7000.0"
+force_speed = "15.0"
+state_screenshake_tick = 1
+projectile_pos_x = -500
+move_x = 24
+num_hits = 20
+lifetime = 150
+fizzle_on_ground = false
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 1 )
+x = 14
+y = -35
+width = 201
+height = 39
+damage = 120
+damage_in_combo = -60
+minimum_damage = 10
+hitlag_ticks = 2
+victim_hitlag = 2
+cancellable = false
+hits_otg = true
+group = 1
+hit_particle = ExtResource( 20 )
+replace_hit_particle = true
+hit_sound = ExtResource( 21 )
+whiff_sound_volume = -100.0
+knockback = "5.0"
+wall_slam = true
+start_tick = 1
+active_ticks = 300
+always_on = true
+looping = true

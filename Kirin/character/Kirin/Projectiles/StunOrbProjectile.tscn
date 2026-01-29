@@ -1,0 +1,169 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=3]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile11.png" type="Texture" id=4]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile4.png" type="Texture" id=5]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile8.png" type="Texture" id=6]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile12.png" type="Texture" id=7]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile1.png" type="Texture" id=8]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile2.png" type="Texture" id=9]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile5.png" type="Texture" id=10]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile7.png" type="Texture" id=11]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile3.png" type="Texture" id=12]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile10.png" type="Texture" id=13]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile6.png" type="Texture" id=14]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Stunorbprojectile/stunprojectile9.png" type="Texture" id=15]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_shock_grab_whsh01.wav" type="AudioStream" id=16]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_shock_grab_exp02.wav" type="AudioStream" id=17]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_multihit_impact03.wav" type="AudioStream" id=18]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_multihit_impact04.wav" type="AudioStream" id=19]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_multihit_impact01.wav" type="AudioStream" id=20]
+[ext_resource path="res://Kirin/character/Kirin/Particles/bighit.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Kirin/character/Kirin/Particles/test.tscn" type="PackedScene" id=22]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="StunOrbProjectile" instance=ExtResource( 1 )]
+material = SubResource( 1 )
+movable = false
+can_be_hit_by_melee = true
+projectile_immune = true
+
+[node name="Sprite" parent="Flip" index="0"]
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 2 )
+
+[node name="Default" parent="StateMachine" index="0"]
+sprite_animation = "default"
+anim_length = 120
+loop_animation = true
+sfx = ExtResource( 17 )
+move_x = 0
+lifetime = 120
+fizzle_on_ground = false
+fizzle_on_walls = false
+follow_creator = true
+
+[node name="Hitbox1" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 195
+y = -5
+width = 19
+height = 195
+damage = 15
+minimum_damage = 15
+hitlag_ticks = 15
+victim_hitlag = 15
+cancellable = false
+hit_height = 0
+hit_particle = ExtResource( 22 )
+replace_hit_particle = true
+whiff_sound = ExtResource( 19 )
+hit_sound = ExtResource( 18 )
+whiff_sound_volume = -40.0
+dir_x = "-5.0"
+knockback = "20.0"
+start_tick = 1
+always_on = true
+looping = true
+loop_active_ticks = 1
+loop_inactive_ticks = 1
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/Default" index="1"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -196
+y = -10
+width = 21
+height = 178
+damage = 15
+minimum_damage = 15
+hitlag_ticks = 15
+victim_hitlag = 15
+cancellable = false
+hit_height = 0
+hit_particle = ExtResource( 22 )
+replace_hit_particle = true
+whiff_sound = ExtResource( 18 )
+hit_sound = ExtResource( 20 )
+whiff_sound_volume = -40.0
+dir_x = "5.0"
+knockback = "20.0"
+start_tick = 1
+always_on = true
+looping = true
+loop_active_ticks = 1
+loop_inactive_ticks = 1
+
+[node name="Hitbox3" type="Node2D" parent="StateMachine/Default" index="2"]
+z_index = 1000
+script = ExtResource( 3 )
+y = -199
+width = 204
+height = 29
+damage = 15
+minimum_damage = 15
+hitlag_ticks = 15
+victim_hitlag = 15
+cancellable = false
+hit_height = 0
+hit_particle = ExtResource( 22 )
+replace_hit_particle = true
+whiff_sound = ExtResource( 18 )
+hit_sound = ExtResource( 19 )
+whiff_sound_volume = -40.0
+dir_x = "0.0"
+dir_y = "5.0"
+knockback = "20.0"
+knockdown = true
+start_tick = 1
+always_on = true
+looping = true
+loop_active_ticks = 1
+loop_inactive_ticks = 1
+
+[node name="Hitbox4" type="Node2D" parent="StateMachine/Default" index="3"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -2
+y = 161
+width = 224
+height = 24
+damage = 15
+minimum_damage = 15
+hitlag_ticks = 15
+victim_hitlag = 15
+cancellable = false
+hit_height = 2
+hit_particle = ExtResource( 21 )
+replace_hit_particle = true
+whiff_sound = ExtResource( 19 )
+hit_sound = ExtResource( 16 )
+whiff_sound_volume = -40.0
+dir_x = "0.0"
+dir_y = "-5.0"
+knockback = "20.0"
+knockdown = true
+start_tick = 1
+always_on = true
+looping = true
+loop_active_ticks = 1
+loop_inactive_ticks = 1

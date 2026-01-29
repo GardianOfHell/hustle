@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_SC_sword_whsh_md02.wav-0659faa44df82a36ba2df9378f18a61c.sample"
+
+[deps]
+
+source_file="res://Kirin/character/Kirin/Sounds/sfx_SC_sword_whsh_md02.wav"
+dest_files=[ "res://.import/sfx_SC_sword_whsh_md02.wav-0659faa44df82a36ba2df9378f18a61c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,117 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://projectile/DirProjectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj24.png" type="Texture" id=3]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj25.png" type="Texture" id=4]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj12.png" type="Texture" id=5]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj2.png" type="Texture" id=6]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj4.png" type="Texture" id=7]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj8.png" type="Texture" id=8]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj9.png" type="Texture" id=9]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj10.png" type="Texture" id=10]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj11.png" type="Texture" id=11]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj1.png" type="Texture" id=12]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj6.png" type="Texture" id=13]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj16.png" type="Texture" id=14]
+[ext_resource path="res://Kirin/character/Kirin/States/SimpleProjectileDefaultState.gd" type="Script" id=15]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=16]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj15.png" type="Texture" id=17]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj17.png" type="Texture" id=18]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj3.png" type="Texture" id=19]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj18.png" type="Texture" id=20]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj19.png" type="Texture" id=21]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj20.png" type="Texture" id=22]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj13.png" type="Texture" id=23]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj22.png" type="Texture" id=24]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj14.png" type="Texture" id=25]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj5.png" type="Texture" id=26]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj21.png" type="Texture" id=27]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj23.png" type="Texture" id=28]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/Dread Vestige/projectile/dreadVestigeproj7.png" type="Texture" id=29]
+[ext_resource path="res://Kirin/character/Kirin/States/GrandBoltmain.gd" type="Script" id=37]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_shock_grab_whsh01.wav" type="AudioStream" id=39]
+[ext_resource path="res://Kirin/character/Kirin/Sounds/sfx_RA_intro_appear_farL.wav" type="AudioStream" id=40]
+[ext_resource path="res://Kirin/character/Kirin/Particles/bighit.tscn" type="PackedScene" id=41]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 6 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 26 ), ExtResource( 13 ), ExtResource( 29 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 3 ), ExtResource( 4 ), null ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "explosion",
+"speed": 5.0
+} ]
+
+[node name="GrandBolt" instance=ExtResource( 2 )]
+material = SubResource( 1 )
+script = ExtResource( 37 )
+max_ground_speed = "30"
+max_air_speed = "30"
+max_fall_speed = "30"
+extra_state_variables = ""
+fizzle_on_ceiling = true
+projectile_immune = true
+
+[node name="Sprite" parent="Flip" index="0"]
+material = SubResource( 3 )
+frames = SubResource( 2 )
+frame = 14
+
+[node name="Default" parent="StateMachine" index="0"]
+script = ExtResource( 15 )
+fallback_state = "default"
+sprite_animation = "default"
+anim_length = 26
+enter_force_speed = "15.0"
+enter_sfx = ExtResource( 39 )
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 16 )
+x = 25
+y = -9
+width = 25
+height = 28
+damage = 85
+damage_in_combo = 85
+minimum_damage = 85
+victim_hitlag = 30
+cancellable = false
+hits_otg = true
+ignore_armor = true
+ignore_projectile_armor = true
+guard_break = true
+block_punishable = true
+hit_particle = ExtResource( 41 )
+replace_hit_particle = true
+hit_sound = ExtResource( 40 )
+dir_x = "0"
+dir_y = "0"
+knockback = "0"
+grounded_hit_state = "HurtAerial"
+wall_slam = true
+start_tick = 9
+active_ticks = 11

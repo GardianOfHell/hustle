@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_hit_face_lg03.wav-f949dfca6f536b0b07c5cd19f44dbac3.sample"
+
+[deps]
+
+source_file="res://Kirin/character/Kirin/Sounds/sfx_hit_face_lg03.wav"
+dest_files=[ "res://.import/sfx_hit_face_lg03.wav-f949dfca6f536b0b07c5cd19f44dbac3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

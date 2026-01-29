@@ -1,0 +1,13 @@
+{
+  "name": "Kirin2",
+  "friendly_name": "Kirin2 by GardianOfHell",
+  "description": "Custom Kirin",
+  "author": "GardianOfHell",
+  "version": "1.0",
+  "link": "",
+  "id": "DuMusstWarframeSpielen",
+  "requires": ["char_loader"],
+  "overwrites": false,
+  "priority": 0,
+  "client_side": false
+}

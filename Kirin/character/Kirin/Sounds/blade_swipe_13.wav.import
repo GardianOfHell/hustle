@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/blade_swipe_13.wav-38461d7775a7d063e8af776f2101a90f.sample"
+
+[deps]
+
+source_file="res://Kirin/character/Kirin/Sounds/blade_swipe_13.wav"
+dest_files=[ "res://.import/blade_swipe_13.wav-38461d7775a7d063e8af776f2101a90f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

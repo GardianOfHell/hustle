@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://sound/common/explosion5.wav" type="AudioStream" id=1]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=2]
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=4]
+[ext_resource path="res://YourMod/characters/Akuma/Sprites/shakunetsu_strip3.png" type="Texture" id=5]
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 35, 47 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 35, 0, 35, 47 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 47, 35, 47 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Gohadoken" instance=ExtResource( 3 )]
+material = SubResource( 4 )
+
+[node name="Sprite" parent="Flip" index="0"]
+frames = SubResource( 3 )
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="CollisionBox" parent="." index="2"]
+width = 5
+height = 5
+
+[node name="Hurtbox" parent="." index="3"]
+width = 5
+height = 5
+
+[node name="Default" parent="StateMachine" index="0"]
+apply_forces = true
+sprite_animation = "default"
+anim_length = 12
+ticks_per_frame = 4
+loop_animation = true
+move_x = 10
+clash = false
+num_hits = 3
+lifetime = 30
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 2 )
+x = 3
+width = 9
+height = 9
+damage = 65
+hitstun_ticks = 15
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+can_clash = false
+whiff_sound = null
+hit_sound = ExtResource( 1 )
+dir_x = "0.5"
+dir_y = "-0.5"
+knockback = "5.0"
+start_tick = 1
+always_on = true
+looping = true

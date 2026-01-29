@@ -48,6 +48,9 @@ var name_paths = {
 	"Wizard": "res://characters/wizard/Wizard.tscn",
 	"Robot": "res://characters/robo/Robot.tscn",
 	"Mutant": "res://characters/mutant/Mutant.tscn",
+	"testChar": "res://!_testChar/characters/testChar/testChar.tscn",
+	"Kirin": "res://Kirin/character/Kirin/Kirin.tscn",
+	"Kuroi": "res://YourMod/characters/Akuma/Kuroi.tscn",
 #	"Alien": "res://characters/alien/Alien.tscn",
 }
 

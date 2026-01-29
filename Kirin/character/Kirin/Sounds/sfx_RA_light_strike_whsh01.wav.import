@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_RA_light_strike_whsh01.wav-56a0a67e50b7185d268fb30a44f5e30f.sample"
+
+[deps]
+
+source_file="res://Kirin/character/Kirin/Sounds/sfx_RA_light_strike_whsh01.wav"
+dest_files=[ "res://.import/sfx_RA_light_strike_whsh01.wav-56a0a67e50b7185d268fb30a44f5e30f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
