@@ -1,18 +1,51 @@
-[gd_resource type="SpriteFrames" load_steps=31 format=2]
+[gd_resource type="SpriteFrames" load_steps=66 format=2]
 
 [ext_resource path="res://characters/stickman/sprites/stickman37.png" type="Texture" id=1]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow1.png" type="Texture" id=2]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow8.png" type="Texture" id=3]
 [ext_resource path="res://characters/stickman/sprites/stickman59.png" type="Texture" id=4]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow6.png" type="Texture" id=5]
 [ext_resource path="res://characters/stickman/sprites/stickman61.png" type="Texture" id=6]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow4.png" type="Texture" id=7]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow2.png" type="Texture" id=8]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow12.png" type="Texture" id=9]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow3.png" type="Texture" id=10]
 [ext_resource path="res://characters/stickman/sprites/stickman53.png" type="Texture" id=11]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow13.png" type="Texture" id=12]
 [ext_resource path="res://characters/stickman/sprites/stickman38.png" type="Texture" id=13]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow9.png" type="Texture" id=14]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow5.png" type="Texture" id=15]
 [ext_resource path="res://characters/stickman/sprites/stickman55.png" type="Texture" id=16]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow10.png" type="Texture" id=17]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow11.png" type="Texture" id=18]
 [ext_resource path="res://characters/stickman/sprites/stickman32.png" type="Texture" id=19]
 [ext_resource path="res://characters/stickman/sprites/stickman54.png" type="Texture" id=20]
 [ext_resource path="res://characters/stickman/sprites/stickman52.png" type="Texture" id=21]
 [ext_resource path="res://characters/stickman/sprites/stickman56.png" type="Texture" id=22]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow7.png" type="Texture" id=23]
 [ext_resource path="res://characters/stickman/sprites/stickman33.png" type="Texture" id=24]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow16.png" type="Texture" id=25]
 [ext_resource path="res://characters/stickman/sprites/stickman58.png" type="Texture" id=26]
 [ext_resource path="res://characters/stickman/sprites/stickman60.png" type="Texture" id=27]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow21.png" type="Texture" id=28]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow31.png" type="Texture" id=29]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow19.png" type="Texture" id=30]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow30.png" type="Texture" id=31]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow17.png" type="Texture" id=32]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow22.png" type="Texture" id=33]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow24.png" type="Texture" id=34]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow29.png" type="Texture" id=35]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow23.png" type="Texture" id=36]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow34.png" type="Texture" id=37]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow35.png" type="Texture" id=38]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow33.png" type="Texture" id=39]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow14.png" type="Texture" id=40]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow27.png" type="Texture" id=41]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow28.png" type="Texture" id=42]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow26.png" type="Texture" id=43]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow18.png" type="Texture" id=44]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow25.png" type="Texture" id=45]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow15.png" type="Texture" id=46]
 [ext_resource path="res://characters/stickman/sprites/stickman1.png" type="Texture" id=47]
 [ext_resource path="res://characters/stickman/sprites/wall_slam.png" type="Texture" id=48]
 [ext_resource path="res://characters/stickman/sprites/stickman30.png" type="Texture" id=49]
@@ -24,6 +57,8 @@
 [ext_resource path="res://characters/stickman/sprites/stickman6.png" type="Texture" id=55]
 [ext_resource path="res://characters/stickman/sprites/stickman8.png" type="Texture" id=56]
 [ext_resource path="res://characters/stickman/sprites/stickman5.png" type="Texture" id=57]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow20.png" type="Texture" id=58]
+[ext_resource path="res://!_testChar/characters/testChar/spirtes/Sow/Sow32.png" type="Texture" id=59]
 [ext_resource path="res://characters/stickman/sprites/stickman9.png" type="Texture" id=64]
 [ext_resource path="res://characters/stickman/sprites/stickman17.png" type="Texture" id=66]
 [ext_resource path="res://characters/stickman/sprites/stickman18.png" type="Texture" id=67]
@@ -123,11 +158,6 @@ animations = [ {
 "name": "Landing",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 19 ) ],
 "loop": true,
 "name": "ParryHigh",
@@ -146,6 +176,16 @@ animations = [ {
 "frames": [ ExtResource( 57 ), ExtResource( 55 ), ExtResource( 50 ), ExtResource( 56 ) ],
 "loop": true,
 "name": "RollForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 23 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 44 ), ExtResource( 30 ), ExtResource( 58 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 59 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Sow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 44 ), ExtResource( 30 ), ExtResource( 58 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 59 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "SowEnd",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
