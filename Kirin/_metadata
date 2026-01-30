@@ -1,9 +1,9 @@
 {
   "name": "Kirin2",
-  "friendly_name": "Kirin2 by GardianOfHell",
-  "description": "Custom Kirin",
+  "friendly_name": "Kirin Overhauled by GardianOfHell",
+  "description": "Orignal author: DeepNutty",
   "author": "GardianOfHell",
-  "version": "1.0",
+  "version": "Overhauled Alpha",
   "link": "",
   "id": "DuMusstWarframeSpielen",
   "requires": ["char_loader"],

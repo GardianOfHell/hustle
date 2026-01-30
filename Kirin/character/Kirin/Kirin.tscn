@@ -1,4 +1,4 @@
-[gd_scene load_steps=876 format=2]
+[gd_scene load_steps=877 format=2]
 
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/stickman/sprites/phantomdash3.png" type="Texture" id=2]
@@ -871,6 +871,7 @@
 [ext_resource path="res://Kirin/character/Kirin/Sprites/Icons/skytwirl.png" type="Texture" id=869]
 [ext_resource path="res://Kirin/character/Kirin/Sprites/Icons/dreadvestige.png" type="Texture" id=870]
 [ext_resource path="res://Kirin/character/Kirin/Sprites/Icons/lightningtrill.png" type="Texture" id=871]
+[ext_resource path="res://characters/ThrowBox.gd" type="Script" id=872]
 
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
@@ -1793,9 +1794,12 @@ Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
 
-[node name="HitBox" type="Node2D" parent="StateMachine/HeavyHighStart" index="0"]
+[node name="ThrowBox" type="Node2D" parent="StateMachine/HeavyHighStart" index="0"]
 z_index = 1000
-script = ExtResource( 221 )
+script = ExtResource( 872 )
+__meta__ = {
+"_editor_description_": ""
+}
 x = 77
 y = -78
 width = 23
@@ -1814,9 +1818,12 @@ knockback = "5.0"
 start_tick = 17
 active_ticks = 6
 
-[node name="HitBox2" type="Node2D" parent="StateMachine/HeavyHighStart" index="1"]
+[node name="ThrowBox2" type="Node2D" parent="StateMachine/HeavyHighStart" index="1"]
 z_index = 1000
-script = ExtResource( 221 )
+script = ExtResource( 872 )
+__meta__ = {
+"_editor_description_": ""
+}
 x = 24
 y = -110
 width = 31
