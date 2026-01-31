@@ -1377,10 +1377,6 @@ spawn_particle_on_enter = true
 
 [node name="Burst" parent="StateMachine" index="12"]
 ticks_per_frame = 2
-interrupt_from_string = "BusyHurt
-Burst"
-interrupt_into_string = "Grounded
-Aerial"
 
 [node name="TechRoll" parent="StateMachine" index="25"]
 sprite_animation = "RollFoward"
@@ -1423,8 +1419,6 @@ ticks_per_frame = 2
 show_in_menu = false
 
 [node name="WhiffInstantCancel" parent="StateMachine" index="38"]
-interrupt_from_string = "BusyNormal
-WhiffCancel"
 interrupt_into_string = "GroundedAttack
 GroundedSpecial
 GroundedSuper
