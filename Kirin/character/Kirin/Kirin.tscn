@@ -2266,7 +2266,7 @@ replace_hit_particle = true
 hit_sound = ExtResource( 595 )
 hit_sound_volume = -8.0
 dir_x = "0.5"
-start_tick = 5
+start_tick = 4
 active_ticks = 2
 
 [node name="BlitzStart" type="Node2D" parent="StateMachine" index="58"]
@@ -2692,6 +2692,7 @@ hit_particle = ExtResource( 561 )
 replace_hit_particle = true
 hit_sound = ExtResource( 674 )
 dir_x = "-3.0"
+knockback = "7.0"
 start_tick = 13
 active_ticks = 2
 
@@ -2712,6 +2713,7 @@ hit_particle = ExtResource( 561 )
 replace_hit_particle = true
 hit_sound = ExtResource( 674 )
 dir_x = "3.0"
+knockback = "7.0"
 start_tick = 13
 active_ticks = 2
 
