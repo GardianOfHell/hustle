@@ -1167,7 +1167,8 @@ scale = Vector2( 0.8, 0.8 )
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 3 )
 frames = SubResource( 1 )
-frame = 41
+animation = "GrandBolt"
+frame = 15
 
 [node name="LightningRake" type="AnimatedSprite" parent="Flip" index="2"]
 unique_name_in_owner = true
@@ -3108,3 +3109,5 @@ spawn_x_pos = -3
 spawn_y_pos = -13
 speed = 4
 lifetime = 26
+
+[node name="GrandBolt" type="Node2D" parent="StateMachine" index="83"]
