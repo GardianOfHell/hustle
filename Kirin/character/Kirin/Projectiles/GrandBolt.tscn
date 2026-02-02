@@ -1,28 +1,24 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://projectile/DirProjectileDefault.gd" type="Script" id=2]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon2.png" type="Texture" id=3]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon6.png" type="Texture" id=4]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon8.png" type="Texture" id=5]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon1.png" type="Texture" id=6]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon9.png" type="Texture" id=7]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon5.png" type="Texture" id=8]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon10.png" type="Texture" id=9]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon11.png" type="Texture" id=10]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon12.png" type="Texture" id=11]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon4.png" type="Texture" id=12]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon3.png" type="Texture" id=13]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon13.png" type="Texture" id=14]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon14.png" type="Texture" id=15]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt6.png" type="Texture" id=3]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt9.png" type="Texture" id=4]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt11.png" type="Texture" id=5]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt10.png" type="Texture" id=6]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt2.png" type="Texture" id=7]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt7.png" type="Texture" id=8]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt5.png" type="Texture" id=9]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt4.png" type="Texture" id=10]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt3.png" type="Texture" id=11]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt12.png" type="Texture" id=12]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt1.png" type="Texture" id=13]
+[ext_resource path="res://Kirin/character/Kirin/Sprites/EldenBolt/eldenboltbolt/eldenbolt8.png" type="Texture" id=14]
 [ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=16]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon15.png" type="Texture" id=17]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon7.png" type="Texture" id=18]
-[ext_resource path="res://Kirin/character/Kirin/Projectiles/KirinWrym/Kirindragon16.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -32,20 +28,31 @@ animations = [ {
 extra_state_variables = "immunity_susceptible"
 
 [node name="Sprite" parent="Flip" index="0"]
-position = Vector2( -57, 64 )
+position = Vector2( -10, 8 )
 frames = SubResource( 1 )
-frame = 4
+frame = 3
+
+[node name="CollisionBox" parent="." index="2"]
+width = 4
+height = 4
+
+[node name="Hurtbox" parent="." index="3"]
+width = 4
+height = 4
 
 [node name="Default" parent="StateMachine" index="0"]
 script = ExtResource( 2 )
-move_speed = "3.0"
+anim_length = 12
+ticks_per_frame = 12
+enter_force_dir_y = "0.2"
+move_speed = "15.0"
 _c_Homing_Options = 0
 homing = false
 homing_turn_speed = "3.0"
 homing_accel = "1.0"
 max_homing_speed = "10"
 start_homing = false
-lifetime = 100
+lifetime = 15
 relative_data_dir = false
 bounce_on_ground = false
 num_bounces = 2
@@ -53,9 +60,11 @@ num_bounces = 2
 [node name="hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
 z_index = 1000
 script = ExtResource( 16 )
-width = 24
-height = 24
-damage = 20
+width = 4
+height = 4
+damage = 40
+minimum_damage = 20
+hitstun_ticks = 15
 start_tick = 1
 active_ticks = 2
 always_on = true
