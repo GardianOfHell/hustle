@@ -45,20 +45,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
+apply_forces = true
 anim_length = 12
 ticks_per_frame = 12
-enter_force_dir_y = "0.2"
-move_speed = "30.0"
-_c_Homing_Options = 0
-homing = false
-homing_turn_speed = "3.0"
-homing_accel = "1.0"
-max_homing_speed = "10"
-start_homing = false
-lifetime = 15
-relative_data_dir = false
-bounce_on_ground = false
-num_bounces = 2
 
 [node name="hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
 z_index = 1000
@@ -69,5 +58,5 @@ damage = 40
 minimum_damage = 20
 hitstun_ticks = 15
 start_tick = 1
-active_ticks = 2
+active_ticks = 0
 always_on = true
