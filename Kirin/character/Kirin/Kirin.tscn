@@ -3136,4 +3136,3 @@ hit_cancel_into_string = "Grounded
 Aerial"
 SimpleProjectileScene = ExtResource( 5 )
 spawn_tick = 7
-lifetime = 20
