@@ -1344,6 +1344,8 @@ GroundedAttack
 Defence
 Parry
 WhiffCancel"
+initiative_effect = true
+initiative_startup_reduction_amount = 6
 no_collision_start_frame = 0
 no_collision_end_frame = 46
 
@@ -1395,6 +1397,8 @@ interrupt_into_string = "Grounded
 Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
+initiative_effect = true
+initiative_startup_reduction_amount = 2
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/NormMid" index="0"]
 z_index = 1000
@@ -1439,6 +1443,8 @@ interrupt_into_string = "Grounded
 Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
+initiative_effect = true
+initiative_startup_reduction_amount = 1
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/NormLow" index="0"]
 z_index = 1000
@@ -1486,6 +1492,8 @@ interrupt_into_string = "Grounded
 Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
+initiative_effect = true
+initiative_startup_reduction_amount = 3
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/NormHigh" index="0"]
 z_index = 1000
