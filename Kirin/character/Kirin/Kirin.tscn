@@ -172,7 +172,7 @@ scale = Vector2( 0.8, 0.8 )
 material = SubResource( 3 )
 frames = ExtResource( 2 )
 animation = "GrandBolt"
-frame = 8
+frame = 12
 
 [node name="LightningRake" type="AnimatedSprite" parent="Flip" index="2"]
 unique_name_in_owner = true
@@ -2143,6 +2143,9 @@ interrupt_into_string = "Grounded
 Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
+initiative_effect = true
+initiative_startup_reduction_amount = 2
 ProjectileScene = ExtResource( 5 )
 projPosX = 10
 static_x_dir = 0
+Spawn_Tick = 13
