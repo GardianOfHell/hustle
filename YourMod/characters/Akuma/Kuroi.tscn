@@ -210,7 +210,8 @@ damage_taken_modifier = "1.3"
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 3 )
 frames = ExtResource( 145 )
-animation = "Jab"
+animation = "Hurikick"
+frame = 7
 speed_scale = 3.0
 offset = Vector2( 0, -16 )
 
@@ -336,7 +337,7 @@ screenshake_amount = 2
 knockback = "-2.0"
 vacuum = true
 disable_collision = false
-start_tick = 4
+start_tick = 3
 active_ticks = 2
 
 [node name="Strike" type="Node2D" parent="StateMachine" index="41"]
@@ -528,7 +529,7 @@ dir_x = "0.8"
 dir_y = "7.0"
 knockback = "5.0"
 grounded_hit_state = "HurtAerial"
-start_tick = 4
+start_tick = 3
 active_ticks = 1
 
 [node name="AerialPunch2" type="Node2D" parent="StateMachine" index="45"]
@@ -862,9 +863,9 @@ minimum_damage = 60
 hitstun_ticks = 25
 hitlag_ticks = 10
 di_modifier = "1.2"
+guard_break = true
 plus_frames = 3
 hit_sound = ExtResource( 67 )
-guard_break = true
 dir_x = "1.8"
 knockback = "8.5"
 pushback_x = "1.5"
@@ -921,11 +922,11 @@ hitstun_ticks = 25
 cancellable = false
 di_modifier = "0.0"
 sdi_modifier = "0.3"
+guard_break = true
 block_cancel_allowed = false
 plus_frames = 3
 hit_height = 0
 hit_sound = ExtResource( 67 )
-guard_break = true
 dir_y = "-1.8"
 knockback = "3.0"
 pushback_x = "1.5"
@@ -1096,6 +1097,7 @@ anim_length = 30
 title = "Focus Attack"
 type = 2
 button_texture = ExtResource( 25 )
+air_type = 2
 iasa_at = 15
 interruptible_on_opponent_turn = true
 next_state_on_hold = false
@@ -1103,7 +1105,9 @@ next_state_on_hold_on_opponent_turn = true
 end_feint = false
 usable_from_whiff_cancel_if_possible = false
 interrupt_from_string = "Grounded
-GroundedAttack"
+GroundedAttack
+Aerial
+AerialAttack"
 interrupt_into_string = "FocusAttack
 Dash"
 
@@ -1246,7 +1250,8 @@ air_type = 2
 uses_air_movement = true
 combo_only = true
 interrupt_from_string = "Grounded
-GroundedSuper"
+GroundedSuper
+"
 interrupt_into_string = "Dash"
 hit_cancel_into_string = "Dash"
 beats_backdash = true
@@ -2405,7 +2410,6 @@ GroundedSuper"
 interrupt_into_string = "Aerial"
 hit_cancel_into_string = "Aerial"
 interrupt_exceptions_string = "Shory EX"
-super_level = 1
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/Shoryuken EX" index="0"]
 z_index = 1000
@@ -2563,14 +2567,13 @@ interrupt_into_string = "Grounded
 Aerial"
 hit_cancel_into_string = "Grounded
 Aerial"
-super_level = 1
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/Hurricane EX" index="0"]
 z_index = 1000
 script = ExtResource( 93 )
 y = -15
 height = 17
-damage = 20
+damage = 30
 minimum_damage = 20
 hitstun_ticks = 35
 hitlag_ticks = 0
@@ -2624,7 +2627,7 @@ x = 12
 y = -9
 width = 10
 height = 10
-damage = 30
+damage = 40
 minimum_damage = 10
 hitstun_ticks = 18
 hitlag_ticks = 0
@@ -2649,7 +2652,7 @@ x = -12
 y = -9
 width = 10
 height = 10
-damage = 30
+damage = 40
 minimum_damage = 10
 hitstun_ticks = 18
 hitlag_ticks = 0
@@ -2970,7 +2973,6 @@ self_interruptable = false
 interrupt_from_string = "Aerial
 AerialSuper
 Shory EX"
-super_level = 1
 
 [node name="Hyakkishu" type="Node2D" parent="StateMachine" index="99"]
 script = ExtResource( 95 )
