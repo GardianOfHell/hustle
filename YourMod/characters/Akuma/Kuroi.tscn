@@ -2355,6 +2355,7 @@ interrupt_into_string = "Aerial"
 hit_cancel_into_string = "Aerial"
 interrupt_exceptions_string = "Shory EX"
 super_level_ = 1
+supers_used_ = 0
 super_effect_ = true
 scale_combo_meter_ = true
 
