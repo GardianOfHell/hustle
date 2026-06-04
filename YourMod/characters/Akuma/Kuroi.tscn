@@ -1182,6 +1182,35 @@ wall_slam = true
 start_tick = 12
 active_ticks = 8
 
+[node name="UnblockableHitbox" type="Node2D" parent="StateMachine/FocusSuccess" index="1"]
+z_index = 1000
+script = ExtResource( 111 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = 29
+y = -20
+width = 15
+height = 7
+damage = 200
+minimum_damage = 130
+hitstun_ticks = 175
+hitlag_ticks = 10
+victim_hitlag = 30
+meter_gain_modifier = "0"
+ignore_armor = true
+can_clash = false
+hit_particle = ExtResource( 36 )
+hit_sound = ExtResource( 27 )
+bass_on_whiff = true
+dir_y = "5.0"
+knockdown = true
+hard_knockdown = true
+disable_collision = false
+wall_slam = true
+start_tick = 12
+active_ticks = 8
+
 [node name="FocusSuccessStrong" type="Node2D" parent="StateMachine" index="66"]
 script = ExtResource( 26 )
 apply_forces = true
