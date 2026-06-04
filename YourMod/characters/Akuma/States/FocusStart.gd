@@ -3,7 +3,7 @@ extends CharacterState
 func _enter():
 	$"%FocusEffect".start_emitting()
 
-func _frame_5():
+func _frame_3():
 		host.has_hyper_armor = true
 
 func _tick():
